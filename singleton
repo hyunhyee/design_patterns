@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+
+class Singleton {
+  late int count;
+
+  static final Singleton _instance = Singleton._internal();
+
+  factory Singleton() => _instance;
+
+  Singleton._internal() {
+    count = 0;
+    print("Singleton was created");
+  }
+}
+
+void main() {
+  var one = Singleton();
+  one.count++;
+  print(one.count);
+
+  var two = Singleton();
+  var three = Singleton();
+  two.count++;
+  three.count++;
+
+  print(two.count);
+  print(three.count);
+}

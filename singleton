@@ -1,4 +1,4 @@
-```java
+```dart
 import 'package:flutter/material.dart';
 
 class Singleton {

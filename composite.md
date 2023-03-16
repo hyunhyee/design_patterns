@@ -49,3 +49,53 @@ class HomePage extends StatelessWidget {
   }
 }
 ```
+
+```dart
+abstract class Component {
+  void operation();
+}
+
+class Leaf extends Component {
+  @override
+  void operation() {
+    print("Leaf operation performed.");
+  }
+} ❓이거랑 template method pattern 이랑 다른게 뭐지?
+
+class Composite extends Component {
+  List<Component> _children = [];
+
+  void add(Component component) {
+    _children.add(component);
+  }
+
+  void remove(Component component) {
+    _children.remove(component);
+  }
+
+  @override
+  void operation() {
+    print("Composite operation performed.");
+    for (var component in _children) {
+      component.operation();
+    }
+  }
+}
+
+void main() {
+  var leaf1 = Leaf();
+  var leaf2 = Leaf();
+  var leaf3 = Leaf();
+
+  var composite1 = Composite();
+  composite1.add(leaf1);
+  composite1.add(leaf2);
+
+  var composite2 = Composite();
+  composite2.add(leaf3);
+  composite2.add(composite1);
+
+  composite2.operation();
+}
+
+```

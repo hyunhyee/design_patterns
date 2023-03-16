@@ -33,6 +33,11 @@ void main() {
   game.play();
 }
 
-
+```
+printed
+```dart
+Chess Game Initialized! Start playing.
+Chess Game Started. Enjoy the game!
+Chess Game Finished!
 
 ```

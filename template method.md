@@ -4,7 +4,7 @@ abstract class Game {
   void startPlay();
   void endPlay();
 
-   void play() {
+   void play() { // template method
       initialize();
       startPlay();
       endPlay();
@@ -13,7 +13,7 @@ abstract class Game {
 
 class Chess extends Game {
   @override
-  void endPlay() {
+  void endPlay() { // hook
     print("Chess Game Finished!");
   }
 

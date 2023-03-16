@@ -99,3 +99,11 @@ void main() {
 }
 
 ```
+
+printed
+```dart
+Composite operation performed.
+Leaf operation performed.
+Leaf operation performed.
+
+```

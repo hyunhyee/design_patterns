@@ -60,7 +60,7 @@ class Leaf extends Component {
   void operation() {
     print("Leaf operation performed.");
   }
-} ❓이거랑 template method pattern 이랑 다른게 뭐지?
+} ❓이거랑 template method pattern 이랑 다른게 뭐지?template은 정해진 순서 여부?
 
 class Composite extends Component {
   List<Component> _children = [];

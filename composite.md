@@ -65,8 +65,12 @@ class Leaf extends Component {
 class Composite extends Component {
   List<Component> _children = [];
 
-  void add(Component component) {
+  void add(Component component) { 
     _children.add(component);
+  }
+  
+  ❓ void add() { 
+    _children.add();
   }
 
   void remove(Component component) {
